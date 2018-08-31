@@ -52,9 +52,9 @@ rm $JBOSS_HOME/standalone/configuration/standalone.xml
 echo "coping custom standalone"
 cp ./standalone.xml $JBOSS_HOME/standalone/configuration/standalone.xml
 
-#echo -n "-----> Deploying war file(s)... "
-#cp target/*.war $JBOSS_HOME/standalone/deployments/
-#echo "done"
+echo -n "-----> Deploying war file(s)... "
+cp target/*.war $JBOSS_HOME/standalone/deployments/
+echo "done"
 
 echo "-----> Creating configuration..."
 if [ -f $BUILD_DIR/Procfile ]; then
