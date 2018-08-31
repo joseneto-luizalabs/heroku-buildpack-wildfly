@@ -37,10 +37,10 @@ echo "moved"
 rm wildfly-$WILDFLY_VERSION.tar.gz
 echo "done"
 
-echo "extract hsqldb"
-tar -xvzf ./hsqldb.tar.gz
-echo "moving hsqldb"
-mv ./hsqldb $JBOSS_HOME/modules/system/layers/base/org
+#echo "extract hsqldb"
+#tar -xvzf ./hsqldb.tar.gz
+#echo "moving hsqldb"
+#mv ./hsqldb $JBOSS_HOME/modules/system/layers/base/org
 
 echo "extract postgresql"
 tar -xvzf ./postgresql.tar.gz
