@@ -28,19 +28,14 @@ cd $BUILD_DIR
 mkdir -p .jboss
 
 echo -n "-----> Installing Wildfly ${WILDFLY_VERSION}... "
-curl -O http://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz
+curl -O http://repo.jenkins-ci.org/public/org/wildfly/wildfly-dist/${WILDFLY_VERSION}/wildfly-dist-${WILDFLY_VERSION}.tar.gz
 echo "downloaded"
-tar xf wildfly-$WILDFLY_VERSION.tar.gz
+tar xf wildfly-dist-$WILDFLY_VERSION.tar.gz
 echo "extracted"
 mv wildfly-$WILDFLY_VERSION $JBOSS_HOME
 echo "moved"
-rm wildfly-$WILDFLY_VERSION.tar.gz
+rm wildfly-dist-$WILDFLY_VERSION.tar.gz
 echo "done"
-
-#echo "extract hsqldb"
-#tar -xvzf ./hsqldb.tar.gz
-#echo "moving hsqldb"
-#mv ./hsqldb $JBOSS_HOME/modules/system/layers/base/org
 
 echo "extract postgresql"
 tar -xvzf ./postgresql.tar.gz
